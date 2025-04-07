@@ -805,6 +805,7 @@ textarea {
     width: 5.5rem;
     height: 1rem;
 }
+
 .offer__btns .swiper-button-prev:after {
     transform: scaleX(-1)
 }
@@ -814,4 +815,43 @@ textarea {
         cursor: pointer;
         opacity: 0.7;
     }
+}
+
+/* Values  */
+.values {
+    margin: 6.5rem;
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+    gap: 5rem;
+    padding: 4.5rem 0;
+    border-top: 1px solid #ffffff80;
+    border-bottom: 1px solid #ffffff80;
+}
+
+.values__subtitle {
+    color: #777777;
+    font-size: 2.4rem;
+    line-height: 1.2;
+    font-weight: 700;
+    font-family: 'Actay Wide';
+    letter-spacing: -0.04em;
+    text-transform: uppercase;
+}
+
+.values__content {
+    width: 90rem;
+    flex-shrink: 0;
+    font-size: 2.6rem;
+    line-height: 1.25;
+    font-weight: 200;
+    text-align: right;
+}
+
+.values__content strong {
+    font-weight: 600;
+}
+
+.values__content p:not(:last-child) {
+    margin-bottom: 1.5rem;
 }
