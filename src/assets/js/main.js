@@ -63,35 +63,35 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 
-    const burgerBtn = document.querySelector('#burger');
-    const burgerCloseBtn = document.querySelector('#burger-close');
-    const burgerMenu = document.querySelector('.header__burger__menu');
-    const closeMenu = () => {
-        burgerMenu.classList.remove('active');
-    }
+    // const burgerBtn = document.querySelector('#burger');
+    // const burgerCloseBtn = document.querySelector('#burger-close');
+    // const burgerMenu = document.querySelector('.header__burger__menu');
+    // const closeMenu = () => {
+    //     burgerMenu.classList.remove('active');
+    // }
 
-    burgerBtn.addEventListener('click', function () {
-        burgerMenu.classList.add('active');
-    })
-    burgerCloseBtn.addEventListener('click', function () {
-        closeMenu();
-    })
+    // burgerBtn.addEventListener('click', function () {
+    //     burgerMenu.classList.add('active');
+    // })
+    // burgerCloseBtn.addEventListener('click', function () {
+    //     closeMenu();
+    // })
 
-    document.addEventListener('click', (e) => {
-        if (burgerMenu.classList.contains('active') && e.target.classList.contains('header__burger__menu')) {
-            closeMenu();
-        }
-    })
+    // document.addEventListener('click', (e) => {
+    //     if (burgerMenu.classList.contains('active') && e.target.classList.contains('header__burger__menu')) {
+    //         closeMenu();
+    //     }
+    // })
 
-    const headerLinks = document.querySelectorAll('.header__link');
-    headerLinks.forEach((item) => {
-        item.addEventListener('click', () => {
-            const dropdown = item.parentNode.querySelector('.header__dropdown');
-            if (dropdown) {
-                dropdown.classList.toggle('active');
-            }
-        })
-    })
+    // const headerLinks = document.querySelectorAll('.header__link');
+    // headerLinks.forEach((item) => {
+    //     item.addEventListener('click', () => {
+    //         const dropdown = item.parentNode.querySelector('.header__dropdown');
+    //         if (dropdown) {
+    //             dropdown.classList.toggle('active');
+    //         }
+    //     })
+    // })
 
 
     // var details = document.querySelectorAll("details");
@@ -111,52 +111,34 @@ document.addEventListener('DOMContentLoaded', function () {
     //     }
     // }
 
-    var swiper = new Swiper(".resources-swiper", {
-        loop: false,
-        spaceBetween: 40,
-        slidesPerView: 3,
-        breakpoints: {
-            320: {
-                spaceBetween: 15,
-                slidesPerView: 1,
-            },
-            640: {
-                spaceBetween: 40,
-                slidesPerView: 3,
-            }
-        },
-        navigation: {
-            nextEl: '.resources-swiper .swiper-button-next',
-            prevEl: '.resources-swiper .swiper-button-prev',
-        },
-    });
-    var swiperCons = new Swiper(".cons-swiper", {
-        loop: false,
-        spaceBetween: 20,
-        slidesPerView: 2,
-        breakpoints: {
-            320: {
-                spaceBetween: 10,
-                slidesPerView: 1,
-            },
-            640: {
-                spaceBetween: 20,
-                slidesPerView: 2,
-            }
-        },
-        navigation: {
-            nextEl: '.cons-swiper .swiper-button-next',
-            prevEl: '.cons-swiper .swiper-button-prev',
-        },
-    });
-    const readmoreBtn = document.querySelector('#readmore');
-    const readmoreText = document.querySelector('.hidden');
-    if (readmoreBtn) {
-        readmoreBtn.addEventListener('click', () => {
-            readmoreText.classList.add('show');
-            readmoreBtn.style.display = 'none';
-        })
-    }
+    // var swiper = new Swiper(".resources-swiper", {
+    //     loop: false,
+    //     spaceBetween: 40,
+    //     slidesPerView: 3,
+    //     breakpoints: {
+    //         320: {
+    //             spaceBetween: 15,
+    //             slidesPerView: 1,
+    //         },
+    //         640: {
+    //             spaceBetween: 40,
+    //             slidesPerView: 3,
+    //         }
+    //     },
+    //     navigation: {
+    //         nextEl: '.resources-swiper .swiper-button-next',
+    //         prevEl: '.resources-swiper .swiper-button-prev',
+    //     },
+    // });
+
+    // const readmoreBtn = document.querySelector('#readmore');
+    // const readmoreText = document.querySelector('.hidden');
+    // if (readmoreBtn) {
+    //     readmoreBtn.addEventListener('click', () => {
+    //         readmoreText.classList.add('show');
+    //         readmoreBtn.style.display = 'none';
+    //     })
+    // }
 
     // const showTab = (elTabBtn) => {
     //     const elTab = elTabBtn.closest('.tab');
