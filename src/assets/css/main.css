@@ -280,7 +280,7 @@ textarea {
 }
 
 .white-btn {
-    color: var(--black);
+    color: #000;
     background: #FFFFFFCC;
 }
 
@@ -592,4 +592,55 @@ textarea {
     .header__link:active {
         color: var(--blue);
     }
+}
+
+/* Banner  */
+.banner {
+    background-image: url(../img/base/banner.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+}
+
+.banner__inner {
+    padding: 14.3rem 0 18.5rem;
+
+}
+
+.banner__title {
+    text-transform: uppercase;
+    letter-spacing: -0.03em;
+    margin-bottom: 1.1rem;
+}
+
+.banner__title span {
+    font-size: 1.8rem;
+    line-height: 1.2;
+    font-weight: 600;
+    padding: 1.8rem 4rem;
+    color: #FFFEFE;
+    letter-spacing: normal;
+    background: #A1A1A133;
+    border: 2px solid #ffffff80;
+    backdrop-filter: blur(10px);
+    border-radius: 1rem;
+    font-family: "Nunito Sans";
+    text-transform: none;
+    transform: translateY(-2.5rem);
+    position: relative;
+    display: inline-block;
+}
+
+.banner__text {
+    color: #eaeaea;
+    font-size: 2.4rem;
+    line-height: 1.2;
+    margin-bottom: 6rem;
+}
+
+.banner__btns {
+    display: flex;
+    gap: 4rem;
+    align-items: center;
 }
