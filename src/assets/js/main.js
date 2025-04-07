@@ -111,25 +111,26 @@ document.addEventListener('DOMContentLoaded', function () {
     //     }
     // }
 
-    // var swiper = new Swiper(".resources-swiper", {
-    //     loop: false,
-    //     spaceBetween: 40,
-    //     slidesPerView: 3,
-    //     breakpoints: {
-    //         320: {
-    //             spaceBetween: 15,
-    //             slidesPerView: 1,
-    //         },
-    //         640: {
-    //             spaceBetween: 40,
-    //             slidesPerView: 3,
-    //         }
-    //     },
-    //     navigation: {
-    //         nextEl: '.resources-swiper .swiper-button-next',
-    //         prevEl: '.resources-swiper .swiper-button-prev',
-    //     },
-    // });
+    var swiper = new Swiper(".swiper-offer", {
+        loop: true,
+        centeredSlides: true,
+        spaceBetween: 40,
+        slidesPerView: 3.2,
+        breakpoints: {
+            320: {
+                spaceBetween: 15,
+                slidesPerView: 1.2,
+            },
+            640: {
+                spaceBetween: 40,
+                slidesPerView: 3.2,
+            }
+        },
+        navigation: {
+            nextEl: '.offer__btns .swiper-button-next',
+            prevEl: '.offer__btns .swiper-button-prev',
+        },
+    });
 
     // const readmoreBtn = document.querySelector('#readmore');
     // const readmoreText = document.querySelector('.hidden');
