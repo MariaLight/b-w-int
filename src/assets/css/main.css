@@ -860,6 +860,7 @@ textarea {
 .phylo {
     padding: 7rem 0 15rem;
 }
+
 .phylosophy__box {
     margin-top: 4.7rem;
     display: grid;
@@ -904,7 +905,6 @@ textarea {
     text-wrap: balance;
     color: #fff;
     backdrop-filter: blur(20px)
-
 }
 
 .phylo__name {
@@ -920,4 +920,49 @@ textarea {
     line-height: 1.2;
     font-weight: 600;
     letter-spacing: -0.04em;
+}
+
+/* Contacts  */
+.contacts {
+    padding: 4.4rem 0 30rem;
+}
+
+.contacts__inner {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.contacts__box {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 1rem;
+    font-size: 1.8rem;
+    font-weight: 300;
+    line-height: 1;
+
+}
+
+.contacts__box:nth-child(3) {
+    align-items: end;
+}
+
+.contacts__subtitle {
+    text-transform: uppercase;
+    font-size: 2.2rem;
+    line-height: 1;
+    font-weight: 400;
+}
+
+.contacts__btn {
+    background-color: #0D141533;
+    color: #fffefe;
+    border-radius: .5rem;
+    border: 1px solid #ffffff80;
+    backdrop-filter: blur(12px);
+    font-size: 1.8rem;
+    font-weight: 300;
+    line-height: 1;
+    padding: 1.5rem 4rem;
+    margin: 0 auto;
 }
