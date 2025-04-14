@@ -131,6 +131,26 @@ document.addEventListener('DOMContentLoaded', function () {
             prevEl: '.offer__btns .swiper-button-prev',
         },
     });
+    var swiperFeednack = new Swiper(".swiper-feedback", {
+        loop: false,
+        centeredSlides: false,
+        spaceBetween: 20,
+        slidesPerView: 3.5,
+        breakpoints: {
+            320: {
+                spaceBetween: 15,
+                slidesPerView: 1.2,
+            },
+            640: {
+                spaceBetween: 40,
+                slidesPerView: 3.2,
+            }
+        },
+        navigation: {
+            nextEl: '.feedback__btns .swiper-button-next',
+            prevEl: '.feedback__btns .swiper-button-prev',
+        },
+    });
 
     // const readmoreBtn = document.querySelector('#readmore');
     // const readmoreText = document.querySelector('.hidden');
