@@ -15,8 +15,14 @@
     font-display: swap;
 }
 
-
-
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../resources/fonts/montserrat_light.woff2') format('woff2'),
+        url('../resources/fonts/montserrat_light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
 
 html {
     -webkit-box-sizing: border-box;
@@ -389,12 +395,12 @@ textarea {
 .custom-checkbox>span::before {
     content: '';
     display: inline-block;
-    width: 1.4rem;
-    height: 1.4rem;
+    width: 1.2rem;
+    height: 1.2rem;
     flex-shrink: 0;
     flex-grow: 0;
-    border: 1px solid #323232;
-    margin-right: 1rem;
+    border: 1px solid #BDBDBD;
+    margin-right: .6rem;
     background-repeat: no-repeat;
     background-position: center center;
     background-size: 70% 70%;
@@ -402,13 +408,6 @@ textarea {
     margin-bottom: 0.2rem;
 }
 
-@media (max-width: 640px) {
-    .custom-checkbox>span::before {
-        width: 1rem;
-        height: 1rem;
-        margin-right: .4rem;
-    }
-}
 
 /* стили при наведении курсора на checkbox */
 .custom-checkbox>input:not(:disabled):not(:checked)+span:hover::before {
@@ -427,7 +426,7 @@ textarea {
 
 /* стили для чекбокса, находящегося в состоянии checked */
 .custom-checkbox>input:checked+span::before {
-    background-image: url("data:image/svg+xml,%3Csvg width='21' height='21' viewBox='0 0 21 21' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M16.6741 5.89355L8.01619 15.7883L4.30566 12.0778' stroke='rgb(50, 50, 50)' stroke-width='1.94595' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+    background-image: url("data:image/svg+xml,%3Csvg width='21' height='21' viewBox='0 0 21 21' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M16.6741 5.89355L8.01619 15.7883L4.30566 12.0778' stroke='rgb(255, 255, 255)' stroke-width='1.94595' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
 }
 
 /* стили для чекбокса, находящегося в состоянии disabled */
@@ -448,8 +447,10 @@ textarea {
 .acceptance__text {
     font-size: 1.1rem;
     line-height: 1.1;
-    font-weight: 300;
+    font-weight: 200;
+    letter-spacing: -0.02em;
     color: #fff;
+    opacity: 0.5;
 }
 
 .modal {
@@ -457,8 +458,7 @@ textarea {
     z-index: 999;
     inset: 0;
     bottom: initial;
-    background: #DFDFDF4D;
-    backdrop-filter: blur(30px);
+    background: #00000080;
     width: 100%;
     height: 100vh;
     display: -webkit-box;
@@ -484,14 +484,14 @@ textarea {
 
 .modal__inner {
     position: relative;
-    max-width: 72rem;
+    max-width: 78.5rem;
     width: fit-content
 }
 
 .modal__content {
     border-radius: 1rem;
-    padding: 2.8rem 4.6rem 3.3rem 3.7rem;
-    background-color: #fff;
+    padding: 3.2rem 10rem 5rem 10rem;
+    background-color: #2B2B2B;
     width: 100%;
 }
 
@@ -522,12 +522,30 @@ textarea {
     transition: transform .2s;
     transition: transform .2s, -webkit-transform .2s;
     right: 1rem;
-    color: #000;
+    color: #fff;
 }
 
 .modal__close svg {
     width: 1.2rem;
     height: 1.2rem
+}
+
+.modal__title {
+    font-size: 4.8rem;
+    line-height: 1.1;
+    font-weight: 700;
+    text-transform: none;
+    margin-bottom: 3.1rem;
+}
+
+.modal__form {
+    max-width: 37.5rem;
+    margin: 0 auto;
+}
+
+.modal__form .form__input {
+    background: #FFFFFF33;
+
 }
 
 @media (max-width: 640px) {
@@ -732,11 +750,48 @@ textarea {
 .about__item {
     border-radius: .5rem;
     border: 1px solid #ffffff80;
+    position: relative;
 }
 
 .about__img {
     width: 100%;
     height: 100%;
+}
+
+.about__box {
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 43.07%, rgba(0, 0, 0, 0.8) 84.27%);
+    position: absolute;
+    inset: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: start;
+    padding: 2.5rem 2.2rem;
+    opacity: 0;
+    visibility: hidden;
+    transition: all .2s linear;
+}
+
+.about__title {
+    font-size: 2, 8rem;
+    line-height: 1;
+    font-weight: 700;
+    margin-bottom: .5rem;
+}
+
+.about__text {
+    font-size: 2rem;
+    line-height: 1.2;
+    font-weight: 300;
+    color: #C9C9C9;
+    text-wrap: balance;
+}
+@media (hover:hover) {
+    .about__item:hover .about__box {
+opacity: 1;
+visibility: visible;
+    }
 }
 
 /* Offer  */
@@ -1458,9 +1513,9 @@ textarea {
 
 .objects__inner {
     display: grid;
-grid-template-columns: repeat(4, 1fr);
-grid-template-rows: repeat(4, auto);
-gap: 3rem;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, auto);
+    gap: 3rem;
 }
 
 .objects__item:nth-child(1) {
@@ -1504,4 +1559,160 @@ gap: 3rem;
     font-size: 2.6rem;
     line-height: 1.25;
     font-weight: 600;
+}
+
+/* Offer grid  */
+
+.offer__grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.9rem;
+}
+
+.offer__card {
+    background-color: #0D141533;
+    border: 1px solid #ffffff90;
+    box-shadow: 0px -4.02px 20.09px 0px #FFFFFF08 inset;
+    border-radius: 1rem;
+    padding: 2rem 3.7rem;
+}
+
+.offer__card__image {
+    width: 100%;
+    height: 24.6rem;
+    box-shadow: 0px 4.02px 10.05px 0px #00000026;
+    border: 1px solid #ffffff90;
+    margin-bottom: 3.3rem;
+}
+
+.offer__card__title {
+    padding-bottom: 2rem;
+    border-bottom: 1px solid #FFFFFF40;
+    font-size: 3.2rem;
+    line-height: 1.1;
+    letter-spacing: -0.04em;
+    color: #FFFEFE;
+    font-weight: 300;
+    margin-bottom: 2rem;
+    font-family: 'Montserrat';
+}
+
+.offer__card__title span {
+    font-size: 2rem;
+    opacity: 0.5;
+    margin-left: 2rem;
+}
+
+.offer__card__description {
+    font-size: 2rem;
+    line-height: 1;
+    font-weight: 200;
+    letter-spacing: -0.02em;
+    margin-bottom: 3.6rem;
+    color: #FFFEFE;
+    opacity: 0.7;
+}
+
+.offer__card__btn {
+    width: 100%;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 1.8rem;
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+    border-radius: 1rem;
+}
+
+.offer__card__btn.white-btn {
+    background-color: #FFFEFE;
+    color: #000;
+    margin-bottom: 1rem;
+}
+
+.offer__card__btn.black-btn {
+    background-color: transparent;
+    color: #FFFFFF;
+
+}
+
+/* Product modal  */
+.product-modal {
+    padding: 3rem 3rem 4.7rem 3rem;
+    border: 1px solid #ffffff80;
+    box-shadow: 0px -4.02px 20.09px 0px #FFFFFF08 inset;
+    border-radius: 1rem;
+}
+
+.product-modal .title {
+    margin-bottom: 0;
+    text-align: center;
+}
+
+.product-modal__span {
+    font-size: 1.4rem;
+    line-height: 1;
+    font-weight: 300;
+    text-align: center;
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+    color: #969696;
+}
+
+.product-modal__description {
+    padding: 2.5rem;
+    color: #fff;
+    background-color: #4A4A4A;
+    box-shadow: 0px -4.02px 20.09px 0px #FFFFFF08 inset;
+    border-radius: 1rem;
+    border: 1px solid #ffffff80;
+    margin-bottom: 3rem;
+    font-size: 1.4rem;
+    line-height: 1.2;
+    font-weight: 300;
+    text-wrap: balance;
+    max-width: 66.1rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.product-modal__advantages__title {
+    text-transform: uppercase;
+    color: #fff;
+    font-size: 2rem;
+    line-height: 1;
+    font-weight: 400;
+    margin: 0 auto 2.1rem auto;
+    text-align: center;
+}
+
+.product-modal__advantages {
+    display: flex;
+    align-items: start;
+    gap: 4rem;
+    justify-content: space-between;
+}
+
+.product-modal__advantages__item {
+    flex-direction: column;
+    align-items: center;
+    display: flex;
+}
+
+.product-modal__advantages__icon {
+    width: 5rem;
+    height: 5rem;
+    margin-bottom: 1.5rem;
+}
+
+.product-modal__advantages__icon img {
+    object-fit: contain;
+}
+
+.product-modal__advantages__text {
+    text-align: center;
+    font-size: 1.6rem;
+    line-height: 1;
+    font-weight: 300;
+    color: #fff;
 }

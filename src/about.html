@@ -201,7 +201,6 @@
         </div>
     </footer>
 
-    <!-- 
     <div class="modal" id="callback">
         <div class="modal__inner">
             <button class="modal__close btn-reset" type="button" data-modal-close>
@@ -211,41 +210,32 @@
             </button>
             <div class="modal__content main-screen__right">
                 <div class="modal-form ">
+                    <h2 class="title modal__title">Свяжитесь с нами!</h2>
 
-                    <h3 class="form__subtitle">Leave a request and we will contact you as soon as possible</h3>
-                    <form class="form__box">
-                        <div class="form__block">
-                            <label for="user-name" class="form__label">Your name</label>
-                            <input type="text" class="input-reset form__input" name="user-name" id="user-name"
-                                placeholder="Enter here" required>
-                        </div>
-                        <div class="form__block">
+                    <form class="form__box modal__form">
+                        <input type="text" class="input-reset form__input" name="user-name" id="user-name"
+                            placeholder="Ваше имя" required>
+                        <input type="tel" class="input-reset form__input" name="user-phone" placeholder="Номер телефона"
+                            id="user-phone" required>
+                        <input type="text" class="input-reset form__input" name="user-text"
+                            placeholder="Описание запроса" id="user-text">
 
-                            <label for="user-phone" class="form__label">Phone number</label>
-                            <input type="tel" class="input-reset form__input" name="user-phone" placeholder="Enter here"
-                                id="user-phone" required>
-                        </div>
-                        <div class="form__block">
-
-                            <label for="user-email" class="form__label">E-mail</label>
-                            <input type="email" class="input-reset form__input" name="user-email"
-                                placeholder="Enter here" id="user-email" required>
-                        </div>
                         <div class="form__submit">
-
-                            <button type="submit" class="main-btn btn-reset form__btn"> Send</button>
                             <label class="acceptance custom-checkbox">
                                 <input type="checkbox" name="acceptance" checked>
-                                <span class="acceptance__text">By clicking the button, I agree to the terms of the
-                                    privacy policy</span>
+                                <span class="acceptance__text">Даю согласие на обработку предоставленных данных</span>
                             </label>
+                            
+                            <button type="submit" class="main-btn btn-reset form__btn">Оставить заявку</button>
+
+
+
                         </div>
                     </form>
-
                 </div>
             </div>
         </div>
-    </div> -->
+    </div>
 
 </body>
 
