@@ -25,16 +25,28 @@
                 <img src="assets/img/base/logo.svg" alt="Black & White International">
             </div>
             <nav class="header__nav">
-                <a href="/" class="header__link">Главная</a>
+                <a href="/" class="header__link ">Главная</a>
                 <a href="#" class="header__link current">Проекты</a>
                 <a href="#" class="header__link">О нас</a>
             </nav>
 
-            <!-- <button id="burger" class="header__burger btn-reset">
-                <svg>
-
+            <button id="burger" class="header__burger btn-reset">
+                <svg id="open" class="active">
+                    <use xlink:href="assets/img/sprite.svg#burger"></use>
                 </svg>
-            </button> -->
+                <svg id="close">
+                    <use xlink:href="assets/img/sprite.svg#close"></use>
+                </svg>
+            </button>
+            <div class="burger__menu">
+                <nav class="header__nav">
+                    <a href="/" class="header__link">Главная</a>
+                    <a href="#" class="header__link current">Проекты</a>
+                    <a href="#" class="header__link">О нас</a>
+                </nav>
+                <button class="main-btn btn-reset header__btn" data-modal="callback">Связаться с нами</button>
+
+            </div>
         </div>
     </header>
     <div class="wrapper">
@@ -152,12 +164,13 @@
             <section class="clients container">
                 <div class="clients__inner">
                     <div class="clients__left">
+                        <div class="subtitle">Опыт работы</div>
                         <div class="title">Клиенты</div>
-                        <div class="desctiption">С которыми мы работали</div>
+                        <div class="description">С которыми мы работали</div>
                     </div>
                     <div class="clients__right">
                         <div class="clients__item" onmouseover="this.style.backgroundColor='#EB1932';"
-                            onmouseout="this.style.backgroundColor='transparent';">
+                            data-hover-bg="#EB1932" onmouseout="this.style.backgroundColor='transparent';">
                             <div class="clients__before">
                                 <div class="clients__logo">
                                     <img src="assets/img/temp/logo-default.png" alt="">
@@ -166,7 +179,7 @@
                             <div class="clients__name">Название компании клиента</div>
                         </div>
                         <div class="clients__item" onmouseover="this.style.backgroundColor='#EB1932';"
-                            onmouseout="this.style.backgroundColor='transparent';">
+                            data-hover-bg="#EB1932" onmouseout="this.style.backgroundColor='transparent';">
                             <div class="clients__before">
                                 <div class="clients__logo">
                                     <img src="assets/img/temp/logo-default.png" alt="">
@@ -175,7 +188,7 @@
                             <div class="clients__name">Название компании клиента</div>
                         </div>
                         <div class="clients__item" onmouseover="this.style.backgroundColor='#EB1932';"
-                            onmouseout="this.style.backgroundColor='transparent';">
+                            data-hover-bg="#EB1932" onmouseout="this.style.backgroundColor='transparent';">
                             <div class="clients__before">
                                 <div class="clients__logo">
                                     <img src="assets/img/temp/logo-default.png" alt="">
@@ -184,7 +197,7 @@
                             <div class="clients__name">Название компании клиента</div>
                         </div>
                         <div class="clients__item" onmouseover="this.style.backgroundColor='#EB1932';"
-                            onmouseout="this.style.backgroundColor='transparent';">
+                            data-hover-bg="#EB1932" onmouseout="this.style.backgroundColor='transparent';">
                             <div class="clients__before">
                                 <div class="clients__logo">
                                     <img src="assets/img/temp/logo-default.png" alt="">
@@ -193,7 +206,7 @@
                             <div class="clients__name">Название компании клиента</div>
                         </div>
                         <div class="clients__item" onmouseover="this.style.backgroundColor='#EB1932';"
-                            onmouseout="this.style.backgroundColor='transparent';">
+                            data-hover-bg="#EB1932" onmouseout="this.style.backgroundColor='transparent';">
                             <div class="clients__before">
                                 <div class="clients__logo">
                                     <img src="assets/img/temp/logo-default.png" alt="">
@@ -202,7 +215,7 @@
                             <div class="clients__name">Название компании клиента</div>
                         </div>
                         <div class="clients__item" onmouseover="this.style.backgroundColor='#EB1932';"
-                            onmouseout="this.style.backgroundColor='transparent';">
+                            data-hover-bg="#EB1932" onmouseout="this.style.backgroundColor='transparent';">
                             <div class="clients__before">
                                 <div class="clients__logo">
                                     <img src="assets/img/temp/logo-default.png" alt="">
@@ -211,7 +224,7 @@
                             <div class="clients__name">Название компании клиента</div>
                         </div>
                         <div class="clients__item" onmouseover="this.style.backgroundColor='#EB1932';"
-                            onmouseout="this.style.backgroundColor='transparent';">
+                            data-hover-bg="#EB1932" onmouseout="this.style.backgroundColor='transparent';">
                             <div class="clients__before">
                                 <div class="clients__logo">
                                     <img src="assets/img/temp/logo-default.png" alt="">
@@ -355,11 +368,15 @@
                                     placeholder="Описание запроса" id="user-text">
 
                                 <div class="form__submit">
+                                    <label class="acceptance custom-checkbox">
+                                        <input type="checkbox" name="acceptance" checked>
+                                        <span class="acceptance__text">Даю согласие на обработку предоставленных
+                                            данных</span>
+                                    </label>
 
                                     <button type="submit" class="main-btn btn-reset form__btn">Оставить заявку</button>
 
-                                    <span class="acceptance__text">Нажимая на кнопку, вы соглашаетесь с политикой
-                                        конфиденциальности.</span>
+
 
                                 </div>
                             </form>
@@ -441,7 +458,7 @@
                                 <input type="checkbox" name="acceptance" checked>
                                 <span class="acceptance__text">Даю согласие на обработку предоставленных данных</span>
                             </label>
-                            
+
                             <button type="submit" class="main-btn btn-reset form__btn">Оставить заявку</button>
 
 

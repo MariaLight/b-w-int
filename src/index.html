@@ -30,11 +30,23 @@
                 <a href="#" class="header__link">О нас</a>
             </nav>
 
-            <!-- <button id="burger" class="header__burger btn-reset">
-                <svg>
-
+            <button id="burger" class="header__burger btn-reset">
+                <svg id="open" class="active">
+                    <use xlink:href="assets/img/sprite.svg#burger"></use>
                 </svg>
-            </button> -->
+                <svg id="close">
+                    <use xlink:href="assets/img/sprite.svg#close"></use>
+                </svg>
+            </button>
+            <div class="burger__menu">
+                <nav class="header__nav">
+                    <a href="/" class="header__link current">Главная</a>
+                    <a href="#" class="header__link">Проекты</a>
+                    <a href="#" class="header__link">О нас</a>
+                </nav>
+                <button class="main-btn btn-reset header__btn" data-modal="callback">Связаться с нами</button>
+
+            </div>
         </div>
     </header>
     <div class="wrapper">
@@ -45,7 +57,7 @@
                         <span>Более 250 проектов</span> <span>7 лет опыта работы</span>
                     </h1>
                     <div class="banner__text">
-                        <p>Более n лет проектируем и реализуем системы гидроизоляции, кровельные конструкции и защиты
+                        <p>Более 7 лет проектируем и реализуем системы гидроизоляции, кровельные конструкции и защиты
                             зданий. Обеспечиваем безопасность объектов от этапа проектирования до сдачи в эксплуатацию.
                         </p>
                     </div>
@@ -317,7 +329,7 @@
                     <h2 class="title">Что делает нас особенными?</h2>
                     <div class="phylosophy__box">
                         <div class="phylo__item">
-                            <h3 class="phylo__name">УВЕРЕННОСТЬ В КАЖДОМ РЕШЕНИИ</h3>
+                            <h3 class="phylo__name">УВЕРЕННОСТЬ В&nbsp;КАЖДОМ РЕШЕНИИ</h3>
                             <div class="phylo__text">Используем проверенные технологии, но не боимся внедрять
                                 современные решения, так наши системы служат годами.</div>
                         </div>

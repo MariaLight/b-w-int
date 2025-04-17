@@ -25,16 +25,28 @@
                 <img src="assets/img/base/logo.svg" alt="Black & White International">
             </div>
             <nav class="header__nav">
-                <a href="/" class="header__link">Главная</a>
-                <a href="#" class="header__link">Проекты</a>
+                <a href="/" class="header__link ">Главная</a>
+                <a href="#" class="header__link ">Проекты</a>
                 <a href="#" class="header__link current">О нас</a>
             </nav>
 
-            <!-- <button id="burger" class="header__burger btn-reset">
-                <svg>
-
+            <button id="burger" class="header__burger btn-reset">
+                <svg id="open" class="active">
+                    <use xlink:href="assets/img/sprite.svg#burger"></use>
                 </svg>
-            </button> -->
+                <svg id="close">
+                    <use xlink:href="assets/img/sprite.svg#close"></use>
+                </svg>
+            </button>
+            <div class="burger__menu">
+                <nav class="header__nav">
+                    <a href="/" class="header__link">Главная</a>
+                    <a href="#" class="header__link">Проекты</a>
+                    <a href="#" class="header__link current">О нас</a>
+                </nav>
+                <button class="main-btn btn-reset header__btn" data-modal="callback">Связаться с нами</button>
+
+            </div>
         </div>
     </header>
     <div class="wrapper">
@@ -225,7 +237,7 @@
                                 <input type="checkbox" name="acceptance" checked>
                                 <span class="acceptance__text">Даю согласие на обработку предоставленных данных</span>
                             </label>
-                            
+
                             <button type="submit" class="main-btn btn-reset form__btn">Оставить заявку</button>
 
 
